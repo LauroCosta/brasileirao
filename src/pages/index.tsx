@@ -2,32 +2,7 @@ import { GetStaticProps } from "next";
 import { ClassificationTable } from "../components/ClassificationTable";
 import { api } from "../services/api";
 import { Container } from "../styles/pages/home";
-
-type Team = {
-  time_id: number,
-  nome_popular: string,
-  sigla: string,
-  escudo: string,
-}
-
-type Position = {
-  posicao: number,
-  pontos: number,
-  time: Team,
-  jogos: number,
-  vitorias: number,
-  empates: number,
-  derrotas: number,
-  gols_pro: number,
-  gols_contra: number,
-  saldo_gols: number,
-  aproveitamento: number,
-  variacao_posicao: number,
-}
-
-type ClassificationProps = {
-  positions: Position[];
-}
+import { ClassificationProps } from "../types";
 
 export default function Home({positions}: ClassificationProps) {
   
@@ -35,9 +10,6 @@ export default function Home({positions}: ClassificationProps) {
     <Container>
       <ClassificationTable positions={positions} />
       
-      
-
-
       <footer>
         {positions.map(position => {
           return(

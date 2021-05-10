@@ -3,11 +3,10 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 500px;
-  height: 50vh;
+  height: 60vh;
   overflow-y: scroll;
 
   display: flex;
-  align-items: center;
   flex-direction: column;
   &::-webkit-scrollbar {
     width: 0;            

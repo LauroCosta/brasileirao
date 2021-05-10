@@ -18,6 +18,7 @@ export const Container = styled.div`
 
   img {
     width: 3rem;
+    height: 3rem;
     padding: 0.25rem;
   }
 
