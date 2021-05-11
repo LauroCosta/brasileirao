@@ -9,7 +9,6 @@ export function PositionCard({position}: PositionCardProps){
       <img src={position.time.escudo} alt={position.time.nome_popular} />
       <span>{position.time.nome_popular}</span>
       <span>{position.pontos}pts</span>
-
     </Container>
   )
 
