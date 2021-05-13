@@ -5,7 +5,7 @@ type Team = {
   escudo: string,
 }
 
-type Position = {
+export type Position = {
   posicao: number,
   pontos: number,
   time: Team,

@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 
 export const Container = styled.div`
-  width: 500px;
   height: 60vh;
   overflow-y: scroll;
+  background: green;
 
   display: flex;
   flex-direction: column;
@@ -14,7 +14,6 @@ export const Container = styled.div`
 `
 export const Table = styled.table`
   border-collapse: collapse;
-
 
   height: 700px;
   background: red;

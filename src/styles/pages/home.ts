@@ -10,32 +10,29 @@ export const Container = styled.div`
    height: 4rem;
   }
 
-  footer {
+  h2 {
+    color: #888888;
+    font-weight: 100;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+  }
 
-
+  main {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    bottom: 0;
-    position: fixed;
-    background: #cbcbcb;
-    padding: 0.5rem 1rem;
-    border-radius: 2rem 2rem 0 0;
+    justify-content: space-between;
 
-    a {
-      padding: 0.25rem;
-      img {
-        width: 3rem;
-        height: 3rem;
-        filter: grayscale(1);
-        filter: brightness(0.8);
-        transition: filter 0.2s;
-
-        &:hover {
-          filter: brightness(1);
-          padding-bottom: 0.25rem;
-        }
+    .matchRound {
+    
+      .cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem
       }
     }
+  }
+
+
+  footer {
+
   }
 `;

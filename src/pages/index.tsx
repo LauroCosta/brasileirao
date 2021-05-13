@@ -4,26 +4,45 @@ import { MatchCard } from "../components/MatchCard";
 import { api } from "../services/api";
 import { Container } from "../styles/pages/home";
 import { ClassificationProps } from "../types";
+import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import { useClassification } from "../context/ClassificationContext";
 
 export default function Home({positions}: ClassificationProps) {
   
+  const {setPositions} = useClassification();
+  setPositions(positions);
+
   return (
     <Container>
-      {/* <ClassificationTable positions={positions} />
-       */}
+    {/* <main>
+    <section className="matchRound">
+        
+        <div className="">
+          <a href="#"><FiChevronLeft /></a>
+          <h2>Rodada 1</h2>
+          <a href=""><FiChevronRight /></a>
+        </div>
+   
+        
+        
+        <div className="cards">
+          <MatchCard />
+          <MatchCard />
+          <MatchCard />
+          <MatchCard />
+          <MatchCard />
+          <MatchCard />
+        </div>
+      </section>
+      
+      <section className="classification">
+        <h2>Classificação</h2>
+        <ClassificationTable positions={positions} />
+      </section>
+    </main>
+    
 
-      <MatchCard />
-
-      <footer>
-        {positions.map(position => {
-          return(
-            <a href="">
-              <img src={position.time.escudo} alt={position.time.nome_popular} />
-            </a>
-          )
-        })}
-
-      </footer>
+    */}
 
     </Container>
   )
